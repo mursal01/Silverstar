@@ -1,0 +1,131 @@
+
+:root {
+  --bg: #0c0c0c;
+  --gold: #f7c400;
+  --text: #fff;
+  --gray: #aaa;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; }
+.container { width: 90%; max-width: 1200px; margin: auto; }
+.btn {
+  display: inline-block; padding: 0.7em 1.5em;
+  border-radius: 6px; transition: 0.3s ease;
+  font-weight: 600; cursor: pointer; border: none;
+}
+.btn.solid { background: var(--gold); color: #000; }
+.btn.solid:hover { background: #e6b000; }
+.btn.ghost { border: 2px solid var(--gold); color: var(--gold); background: transparent; }
+.btn.ghost:hover { background: var(--gold); color: #000; }
+
+.site-header { position: sticky; top: 0; background: #111; padding: 1em 0; z-index: 1000; }
+.nav-wrap { display: flex; justify-content: space-between; align-items: center; }
+.brand { font-weight: 900; font-size: 1.4em; color: var(--gold); }
+.main-nav { display: flex; gap: 1.5em; }
+.main-nav a:hover { color: var(--gold); }
+.cta { display: flex; gap: 0.8em; }
+.burger { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; }
+.burger span { width: 25px; height: 3px; background: var(--gold); }
+
+.hero {
+  min-height: 130vh;
+  position: relative;
+  background: url('gold-car.jpg') center/cover no-repeat;
+  padding: 6em 2em;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* overlay تیره برای خوانایی متن */
+  z-index: 1;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 2; /* تا متن روی overlay دیده شود */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  align-items: center;
+}
+
+ .hero-text h1 {
+  font-size: 3em;          /* می‌تونی کوچیک یا بزرگ کنی */
+  margin-bottom: 0.5em;
+  color: #FFD700;
+  font-weight: 700;
+  white-space: nowrap;     /* 👈 متن همیشه یک خطی */
+  overflow: hidden;        /* اگه خیلی طولانی شد نره بیرون */
+  text-overflow: ellipsis; /* سه نقطه (...) اگه جا نشد */
+  text-align: center;      /* وسط صفحه */
+
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: auto;
+  color: var(--text);
+}
+
+.hero-img {
+  display: none; /* چون تصویر اصلی روی کل هیرو هست */
+  
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.booking-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1em; padding: 2em 0; }
+.booking-form input { padding: 0.7em; border-radius: 5px; border: none; }
+
+.collections h2, .about h2, .testimonials h2, .contact h2 { color: var(--gold); margin: 1em 0; text-align: center; }
+.collections .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 1.5em; }
+.card { background: #1a1a1a; padding: 1em; border-radius: 10px; text-align: center; transition: transform 0.3s; }
+.card img { width: 100%; border-radius: 8px; margin-bottom: 0.5em; }
+.card:hover { transform: translateY(-6px); }
+
+.testimonials .testimonial { background: #1a1a1a; padding: 1.5em; border-radius: 10px; margin-top: 1em; font-style: italic; }
+
+.contact-form { display: grid; gap: 1em; max-width: 500px; margin: auto; }
+.contact-form input, .contact-form textarea { padding: 0.8em; border-radius: 6px; border: none; }
+
+.site-footer { background: #111; padding: 1em; text-align: center; margin-top: 2em; }
+
+.fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+.fade-in.visible { opacity: 1; transform: none; }
+
+.loader { position: fixed; inset: 0; background: #000; display: flex; flex-direction: column; justify-content: center; align-items: center; color: var(--gold); z-index: 2000; }
+.loader .spinner { border: 4px solid #333; border-top: 4px solid var(--gold); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin-bottom: 1em; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* استایل مخصوص موبایل */
+@media (max-width: 768px) {
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;  /* دکمه‌ها زیر هم بیان */
+    align-items: center;
+    gap: 10px;              /* فاصله بین دکمه‌ها */
+  }
+
+  .nav-buttons button {
+    width: 80%;             /* عرض مناسب روی موبایل */
+    margin-bottom: 10px;
+  }
+}

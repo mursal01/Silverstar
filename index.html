@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Silver Star — Luxury Car Rental</title>
+  <meta name="description" content="Rent luxury cars with premium experience. Easy booking, transparent prices, 24/7 service." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Loader -->
+  <div class="loader">
+    <div class="spinner"></div>
+    <span>Loading...</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#">
+        <strong>Silver Star</strong><span class="tag"> Car Shop</span>
+      </a>
+      <nav class="main-nav">
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="cta">
+        <div class=""nav-buttons">
+        <a class="btn ghost" href="#booking">Rent a Car</a>
+        <a class="btn solid" href="#signup">Sign Up</a>
+      </div>
+      <button class="burger" aria-label="menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Discover the Freedom of the Open Road</h1>
+        <p>Experience ultimate freedom with stylish cars. Simple booking. Premium service. Your journey, your way.</p>
+        <a class="btn solid" href="#collections">Explore Now</a>
+      </div>
+      <div class="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="booking" class="booking container">
+    <form class="booking-form">
+      <label>Location: <input type="text" placeholder="New York" required></label>
+      <label>Pick-up Date: <input type="date" required></label>
+      <label>Return Date: <input type="date" required></label>
+      <button class="btn solid" type="submit">Search</button>
+    </form>
+  </section>
+
+  <!-- Collections -->
+  <section id="collections" class="collections container">
+    <h2>Our Luxury Collections</h2>
+    <div class="grid">
+      <div class="card fade-in">
+        <img src="mercedes-benz.png" alt="Mb" />
+        <h3>Mercedes GT C</h3>
+        <p>$200,000 </p>
+        <button class="btn ghost">Select</button>
+      </div>
+      <div class="card fade-in">
+        <img src="Ferrari2.png" alt="Mercedes" />
+        <h3>Lamborghini Aventador SVJ</h3>
+        <p>$300,000 </p>
+        <button class="btn ghost">Select</button>
+      </div>
+      <div class="card fade-in">
+        <img src="white ferrari.png"Jeep" />
+        <h3>Lamborghini Huracan</h3>
+        <p>$250,000 </p>
+        <button class="btn ghost">Select</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about container">
+    <h2>About Us</h2>
+    <p>We are not just a car rental company — we deliver a luxurious journey. Our fleet of premium cars and excellent service ensures an unforgettable experience.</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials container">
+    <h2>What Clients Say</h2>
+    <div class="testimonial fade-in">
+      <p>“From start to finish, my experience with LuxRide was fantastic. Easy booking, flawless car, outstanding service. Highly recommended.”</p>
+      <span>— Ahmad Ahmadi.</span>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact container">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button class="btn solid" type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Silver Star. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
